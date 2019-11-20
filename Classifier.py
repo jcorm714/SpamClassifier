@@ -18,12 +18,6 @@ from sklearn.naive_bayes import MultinomialNB
 
 from pylab import *
 
-#matplot is used to generate diagrams 
-#for the prograrm
-import matplotlib.pyplot as plt
-
-
-
 #STEP 2:  Read in the files from the file system
 
 def readFiles(path):
