@@ -16,8 +16,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 #sklearn also has contains Naive Bayes functionality already.
 from sklearn.naive_bayes import MultinomialNB
 
-from pylab import *
-
 #STEP 2:  Read in the files from the file system
 
 def readFiles(path):
@@ -77,3 +75,10 @@ classifier.fit(counts, targets)
 example_counts = vectorizer.transform(test_data['message'].values)
 predictions = classifier.predict(example_counts)
 print(predictions)
+
+total_score = 0
+for i in range(len(predictions)):
+    if predictions[i] == test_data['class'].values[i]:
+        total_score += 1
+
+print("Accuracy:  ", total_score/len(predictions))
