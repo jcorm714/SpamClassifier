@@ -5,9 +5,7 @@
 import os
 import io 
 
-
 #numpy and pandas are used to store data in memory
-import numpy as np
 from pandas import DataFrame
 
 #Count vectorizer gets the amount of occurrances of words in the email
